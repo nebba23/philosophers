@@ -1,0 +1,119 @@
+body{
+margin:0;
+background:black;
+color:white;
+font-family:Arial;
+transition:opacity 0.5s;
+}
+
+/* stars */
+
+#stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* center content */
+
+.center{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+}
+
+/* typing */
+
+#typing{
+font-size:32px;
+margin-bottom:30px;
+}
+
+/* neon button */
+
+.neon{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:black;
+color:cyan;
+box-shadow:0 0 10px cyan,0 0 20px cyan;
+cursor:pointer;
+text-decoration:none;
+}
+
+.neon:hover{
+transform:scale(1.1);
+}
+
+/* title */
+
+.title{
+text-align:center;
+margin-top:40px;
+}
+
+/* name cards */
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:80px;
+flex-wrap:wrap;
+}
+
+.nameCard{
+background:#111;
+padding:20px;
+width:200px;
+text-align:center;
+font-size:22px;
+border-radius:10px;
+color:cyan;
+text-decoration:none;
+box-shadow:0 0 10px cyan;
+transition:0.3s;
+}
+
+.nameCard:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px cyan;
+}
+
+/* photo */
+
+.photo{
+width:800px;
+border-radius:10px;
+opacity:0;
+transform:scale(0.8);
+transition:all 0.5s ease;
+}
+
+.photo.show{
+opacity:1;
+transform:scale(1);
+box-shadow:0 0 25px cyan;
+}
+
+/* mobile */
+
+@media (max-width:600px){
+
+.container{
+flex-direction:column;
+align-items:center;
+}
+
+.photo{
+width:80%;
+}
+
+}
